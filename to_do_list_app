@@ -1,0 +1,82 @@
+import json
+
+file_name = "to_do_list.json"
+
+
+def load_tasks():
+    try:
+        with open(file_name, "r") as file:
+            return json.load(file)
+    except:
+        return {"tasks": []}
+
+
+def save_tasks(tasks):
+    try:
+        with open(file_name, "w") as file:
+            json.dump(tasks, file)
+    except:
+        print("Failed to save the task.")
+
+
+def create_tasks(tasks):
+    description = input("Enter the task description: ").strip()
+    if description:
+        tasks["tasks"].append({"description": description, "complete": False})
+        save_tasks(tasks)
+        print("Task added.")
+    else:
+        print("Description cannot be empty.")
+
+
+def view_tasks(tasks):
+    task_list = tasks["tasks"]
+    if len(task_list) == 0:
+        print("No tasks to view.")
+    else:
+        print("Your list of To-do lists: ")
+        for i, task in enumerate(task_list):
+            status = "Completed" if task["complete"] else "Pending"
+            print(f"{i + 1}.  {task['description']} | {status}")
+
+
+def mark_task(tasks):
+    view_tasks(tasks)
+    try:
+        task_number = int(
+            input("Please enter the task number you want to mark complete: ").strip())
+        if 1 <= task_number <= len(tasks["tasks"]):
+            tasks["tasks"][task_number - 1]["complete"] = True
+            save_tasks(tasks)
+            print("Task marked complete.")
+        else:
+            print("Invalid task number")
+    except ValueError:
+        print("Enter a valid number.")
+
+
+def main():
+    tasks = load_tasks()
+
+    while True:
+        print("\nTo-Do List Manager")
+        print("1. View Tasks")
+        print("2. Add Tasks")
+        print("3. Complete Tasks")
+        print("4. Exit")
+
+        choice = input("Please enter your choice: ").strip()
+        if choice == "1":
+            view_tasks(tasks)
+        elif choice == "2":
+            create_tasks(tasks)
+        elif choice == "3":
+            mark_task(tasks)
+        elif choice == "4":
+            print("Thanks for using.")
+            break
+        else:
+            print("Invalid Choice, please choose from the options provided.")
+
+
+main()

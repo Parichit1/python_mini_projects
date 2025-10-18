@@ -1,0 +1,49 @@
+import random
+import string
+
+
+def generate_password():
+    while True:
+        length = int(input("How many character do you want?(min 8): ").strip())
+        if length >= 8:
+            break
+        else:
+            print("Minimum required character is 8, Please try again: ")
+
+    inc_uppercase = input(
+        "Do you want uppercase in your passord?(yes/no): ").lower().strip()
+    special_character = input(
+        "Do you want special characters in your passoerd?(yes/no): ").lower().strip()
+    inc_numbers = input(
+        "Do you want numbers in your password?(yes/no): ").lower().strip()
+
+    lower = string.ascii_lowercase
+    upper = string.ascii_uppercase if inc_uppercase == "yes" else ""
+    special = string.punctuation if special_character == "yes" else ""
+    number = string.digits if inc_numbers == "yes" else ""
+
+    all_characters = lower + upper + special + number
+
+    required_char = []
+    if inc_uppercase == "yes":
+        required_char.append(random.choice(upper))
+    if inc_numbers == "yes":
+        required_char.append(random.choice(number))
+    if special_character == "yes":
+        required_char.append(random.choice(special))
+
+    remaining_char = length - len(required_char)
+    password = required_char
+
+    for _ in range(remaining_char):
+        character = random.choice(all_characters)
+        password.append(character)
+
+    random.shuffle(password)
+
+    str_password = "".join(password)
+    return str_password
+
+
+password = generate_password()
+print(password)
