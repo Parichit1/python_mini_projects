@@ -38,3 +38,7 @@ Generates QR codes from user-provided text or URLs and saves them as images.
 ### 8. Trivia Game
 A question-based quiz game that checks user answers and tracks the score.  
 **Concepts Used:** Lists, dictionaries, loops, and conditional statements.
+
+### 9. Hangman
+Classic letter-guessing game with limited attempts. Tracks used letters, prevents duplicate penalties, and supports full-word guesses.
+Concepts Used: Sets, loops, input validation, functions, and simple game state management.
