@@ -10,20 +10,20 @@ The projects cover a wide range of Python fundamentals, including user input han
 ## 📚 Projects Overview
 
 ### 1. **Calculator**
-A simple command-line calculator that performs basic arithmetic operations such as addition, subtraction, multiplication, and division.  
-**Concepts Used:** User input, conditional statements, exception handling.
+A simple command-line calculator that performs basic arithmetic operations, including addition, subtraction, multiplication, and division.  
+**Concepts Used:** User input, conditional statements, and exception handling.
 
 ---
 
 ### 2. **Dice Rolling Game**
 Simulates rolling a dice and displays random outcomes until the user stops.  
-**Concepts Used:** `random` module, loops, user interaction.
+**Concepts Used:** `random` module, loops, and user interaction.
 
 ---
 
 ### 3. **Number Guessing Game**
 The program generates a random number and the player must guess it within limited attempts.  
-**Concepts Used:** Random numbers, conditionals, while loops.
+**Concepts Used:** Random numbers, conditionals, and while loops.
 
 ---
 
@@ -64,5 +64,13 @@ Classic Hangman word-guessing game. Tracks remaining attempts, guessed letters, 
 ---
 
 ### 10. **French Vocabulary Quiz**
-A quiz that tests users on the 100 most common French words. Users can choose how many questions they want, and the program randomly generates non-repeating vocabulary questions.  
+A quiz that tests users on the 100 most common French words. Users can choose the number of questions they want, and the program randomly generates non-repeating vocabulary questions.  
 **Concepts Used:** Dictionaries, lists, loops, user input, `random.sample()`.
+
+---
+
+### 11. Desktop Cleaner
+A simple automation script that organizes all files in a chosen folder (such as your Desktop) by grouping them into subfolders based on file type.  
+For example, all `.pdf` files go into a "pdf Files" folder, all `.jpg` files go into "jpg Files", and so on.
+
+**Concepts Used:** File system operations, `os` module, `shutil`, loops, functions.
