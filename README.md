@@ -1,44 +1,68 @@
 # Python Mini Projects
 
-This repository contains a collection of beginner-to-intermediate-level Python projects designed to practice fundamental programming concepts, including loops, conditionals, data structures, functions, and file handling.  
+This repository contains a collection of beginner-to-intermediate level Python projects designed to strengthen core programming skills.  
 Each project is standalone and can be run directly from the terminal.
+
+The projects cover a wide range of Python fundamentals, including user input handling, functions, loops, conditionals, data structures, file management, and external libraries.
 
 ---
 
-## 🧠 Projects Overview
+## 📚 Projects Overview
 
-### 1. Calculator
-A simple command-line calculator that performs basic arithmetic operations — addition, subtraction, multiplication, and division.  
-**Concepts Used:** User input, conditional statements, and exception handling.
+### 1. **Calculator**
+A simple command-line calculator that performs basic arithmetic operations such as addition, subtraction, multiplication, and division.  
+**Concepts Used:** User input, conditional statements, exception handling.
 
-### 2. Dice Rolling Game
-Simulates the rolling of a dice with random outcomes.  
-**Concepts Used:** Random module, loops, and user interaction.
+---
 
-### 3. Number Guessing Game
-Generates a random number that the player must guess within a limited number of attempts.  
-**Concepts Used:** Random numbers, conditional logic, and while loops.
+### 2. **Dice Rolling Game**
+Simulates rolling a dice and displays random outcomes until the user stops.  
+**Concepts Used:** `random` module, loops, user interaction.
 
-### 4. Random Password Generator
-Generates a secure, random password based on user preferences, including length and character type.  
-**Concepts Used:** String manipulation, random module, functions.
+---
 
-### 5. Rock Paper Scissors
-A classic rock-paper-scissors game between the player and the computer.  
-**Concepts Used:** Conditional logic, randomization, input/output.
+### 3. **Number Guessing Game**
+The program generates a random number and the player must guess it within limited attempts.  
+**Concepts Used:** Random numbers, conditionals, while loops.
 
-### 6. To-Do List App
-A simple task manager to add, view, and remove to-do items, with data saved in a .json file.  
-**Concepts Used:** File handling, JSON module, loops, and user interface logic.
+---
 
-### 7. QR Code Generator
-Generates QR codes from user-provided text or URLs and saves them as images.  
+### 4. **Random Password Generator**
+Generates a secure password based on user preferences (length, symbols, numbers, etc.).  
+**Concepts Used:** String manipulation, randomization, functions.
+
+---
+
+### 5. **Rock Paper Scissors**
+A classic Rock-Paper-Scissors game between the player and the computer.  
+**Concepts Used:** Conditional logic, random choices, game loops.
+
+---
+
+### 6. **To-Do List App**
+A simple terminal-based task manager to add, view, and remove tasks. Tasks are saved to a `.json` file for persistence.  
+**Concepts Used:** JSON handling, file I/O, loops, CRUD operations.
+
+---
+
+### 7. **QR Code Generator**
+Generates QR codes from user-provided text or URLs and saves them as image files.  
 **Concepts Used:** External library (`qrcode`), image saving, file I/O.
 
-### 8. Trivia Game
-A question-based quiz game that checks user answers and tracks the score.  
+---
+
+### 8. **Trivia Game**
+A basic quiz game that asks predefined questions, checks answers, and keeps score.  
 **Concepts Used:** Lists, dictionaries, loops, and conditional statements.
 
-### 9. Hangman
-Classic letter-guessing game with limited attempts. Tracks used letters, prevents duplicate penalties, and supports full-word guesses.
-Concepts Used: Sets, loops, input validation, functions, and simple game state management.
+---
+
+### 9. **Hangman**
+Classic Hangman word-guessing game. Tracks remaining attempts, guessed letters, and prevents repeated guesses.  
+**Concepts Used:** Sets, loops, input validation, functions, and game state management.
+
+---
+
+### 10. **French Vocabulary Quiz**
+A quiz that tests users on the 100 most common French words. Users can choose how many questions they want, and the program randomly generates non-repeating vocabulary questions.  
+**Concepts Used:** Dictionaries, lists, loops, user input, `random.sample()`.
